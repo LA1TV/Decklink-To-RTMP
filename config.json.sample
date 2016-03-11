@@ -1,0 +1,12 @@
+ {
+	"streams": [
+		{
+			"input": 0,
+			"url":"rtmp://stream.example.com/live/ob1",
+			"audioBitrate": "64k",
+			"audioSampleRate": "48000",
+			"videoBitrate": "4000k",
+			"formatMode": 12
+		}
+	]
+}
