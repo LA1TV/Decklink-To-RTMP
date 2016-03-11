@@ -7,6 +7,22 @@
 			"audioSampleRate": "48000",
 			"videoBitrate": "4000k",
 			"formatMode": 12
+		},
+		{
+			"input": 1,
+			"url":"rtmp://stream.example.com/live/ob2",
+			"audioBitrate": "64k",
+			"audioSampleRate": "48000",
+			"videoBitrate": "4000k",
+			"formatMode": 12
+		},
+		{
+			"input": 2,
+			"url":"rtmp://stream.example.com/live/ob3",
+			"audioBitrate": "64k",
+			"audioSampleRate": "48000",
+			"videoBitrate": "4000k",
+			"formatMode": 12
 		}
 	]
 }
