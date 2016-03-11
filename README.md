@@ -3,15 +3,15 @@ Decklink To RTMP
 
 Stream the input to a decklink card to an RTMP server.
 
-= Requirments
+# Requirments
 - [ffmpeg](https://trac.ffmpeg.org/wiki/CompilationGuide) installed (with the libfdk_aac audio codec).
 - bmdcapture (from [bmdtools](https://github.com/lu-zero/bmdtools))
 
-= Configuration
+# Configuration
 Create "config.json".
 Look at "config.json.sample".
 
-== Format Modes
+## Format Modes
 This is the output of the `DeviceList` sample application inluded with the blackmagic SDK for a decklink quad card.
 The `formatMode` is an integer which represents a row in the output (zero indexed). E.g. `12` for `720p59.94`.
 
