@@ -46,7 +46,7 @@ function startStream(streamConfig) {
 		console.log("Stream terminated with code "+code+". Restarting in 5.");		
 		setTimeout(function() {
 			console.log("Restarting...");
-			startStream(inputNum, url);
+			startStream(streamConfig);
 		}, 5000);
 	});
 }
