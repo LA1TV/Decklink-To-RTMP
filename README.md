@@ -4,12 +4,16 @@ Decklink To RTMP
 Stream the input to a decklink card to an RTMP server.
 
 # Requirments
+- NodeJS.
 - [ffmpeg](https://trac.ffmpeg.org/wiki/CompilationGuide) installed (with the libfdk_aac audio codec).
-- bmdcapture (from [bmdtools](https://github.com/lu-zero/bmdtools))
+- bmdcapture (from [bmdtools](https://github.com/lu-zero/bmdtools)).
 
 # Configuration
 Create "config.json".
 Look at "config.json.sample".
+
+# Running
+`node main.js`
 
 ## Format Modes
 This is the output of the `DeviceList` sample application inluded with the blackmagic SDK for a decklink quad card.
