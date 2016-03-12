@@ -13,7 +13,7 @@ Create "config.json".
 Look at "config.json.sample".
 
 # Running
-`node main.js`
+`nodejs main.js`
 
 ## Format Modes
 This is the output of the `DeviceList` sample application inluded with the blackmagic SDK for a decklink quad card.
