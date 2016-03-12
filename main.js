@@ -1,5 +1,6 @@
 const config = require("./config.json");
 const spawn = require('child_process').spawn;
+const path = require('path');
 
 console.log("Starting...");
 
@@ -15,10 +16,11 @@ function startStream(streamConfig) {
 	const videoBitrate = streamConfig.videoBitrate;
 	const audioBitrate = streamConfig.audioBitrate;
 	const audioSampleRate = streamConfig.audioSampleRate;
+	const frameRate = streamConfig.frameRate;
 	const url = streamConfig.url;
 
 	console.log("Starting stream. Input "+inputNum+" => \""+url+"\".");
-	const handle = spawn('bash', ["stream.sh"], {
+	const handle = spawn('bash', [path.resolve(__dirname, "stream.sh")], {
 		detached: false,
 		env: {
 			INPUT_NUMBER: inputNum+"",
@@ -26,7 +28,9 @@ function startStream(streamConfig) {
 			VIDEO_BITRATE: videoBitrate+"",
 			AUDIO_BITRATE: audioBitrate+"",
 			AUDIO_SAMPLE_RATE: audioSampleRate+"",
-			STREAM_URL: url
+			STREAM_URL: url,
+			FRAME_RATE: frameRate+"",
+			GOP_LENGTH: (frameRate*2)+""
 		}
 	});
 

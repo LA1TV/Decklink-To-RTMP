@@ -1,28 +1,22 @@
- {
+{
 	"streams": [
 		{
 			"input": 0,
-			"url":"rtmp://stream.example.com/live/ob1",
+			"url":"rtmp://server.example.com/live/test",
 			"audioBitrate": "64k",
 			"audioSampleRate": "48000",
-			"videoBitrate": "4000k",
-			"formatMode": 12
+			"videoBitrate": "8000k",
+			"formatMode": 12,
+			"frameRate": 30
 		},
 		{
 			"input": 1,
-			"url":"rtmp://stream.example.com/live/ob2",
+			"url":"rtmp://server.example.com/live/test2",
 			"audioBitrate": "64k",
 			"audioSampleRate": "48000",
-			"videoBitrate": "4000k",
-			"formatMode": 12
+			"videoBitrate": "8000k",
+			"formatMode": 12,
+			"frameRate": 30
 		},
-		{
-			"input": 2,
-			"url":"rtmp://stream.example.com/live/ob3",
-			"audioBitrate": "64k",
-			"audioSampleRate": "48000",
-			"videoBitrate": "4000k",
-			"formatMode": 12
-		}
 	]
 }
