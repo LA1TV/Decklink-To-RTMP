@@ -68,14 +68,21 @@ function startStream(streamConfig) {
 		if (fileExists(progressFile)) {
 			const data = fs.readFileSync(progressFile, 'utf8');
 			if (data.length === 0) {
-				console.error("It looks like the stream has failed. Terminating.");
-				killed = true;		
-				process.kill(-child.pid, "SIGKILL");
-				onClosed();
+				onFailure();
 			}
 			else {
 				fs.truncateSync(progressFile);
 			}
+		}
+		else {
+			onFailure();
+		}
+		
+		function onFailure() {
+			console.error("It looks like the stream has failed. Terminating.");
+			killed = true;		
+			process.kill(-child.pid, "SIGKILL");
+			onClosed();
 		}
 	}, 6000);
 
